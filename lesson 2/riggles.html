@@ -1,0 +1,30 @@
+﻿<meta charset="utf-8">
+<script>
+	
+	var quesitonNumber = 4;
+	var rightAnswerCount = 0;
+
+    var answers = [new String("Ножницы"), new String("Лампочка"), new String("Хлеб"), new String("Елка")];
+	var questions = [
+	"Два кольца, два конца, а по середине гвоздик?",
+	"Висит грушка - нельзя скушать?",
+	"Что всему голова?",
+	"Зимой и летом одним цветом?"];
+
+	for (var i = 0; i < quesitonNumber; i++) 
+    {
+        var userAnswer = new String(prompt(questions[i]));
+
+        if (answers[i].toLowerCase() == userAnswer.toLowerCase()) {
+			alert("Вы дали верный ответ");
+			rightAnswerCount++;
+		} else{
+			alert("Вы дали не верный ответ\nПравильный ответ: " + answers[i]);
+		}
+
+		
+	}
+
+alert("Вы дали " + rightAnswerCount + " правильных ответов. \nСпасибо за игру!");
+
+</script>

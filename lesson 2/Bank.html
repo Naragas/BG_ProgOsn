@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var years = 5;
+	var money = parseFloat(prompt("Введите сумму вклада"));
+	var yearPersent = parseFloat(prompt("Введите процентную ставку"));
+
+	for(var i = 1; i <= years; i++){
+		money = money + (money / 100 * yearPersent);
+		if(i < 5 && i!= 1){
+			alert("Через " + i + " года ваш вклад будет равен: " + money.toFixed(2));
+		} else if(i == 1){
+			alert("Через " + i + " год ваш вклад будет равен: " + money.toFixed(2));
+		} else {
+			alert("Через " + i + " лет ваш вклад будет равен: " + money.toFixed(2));
+		}
+	}
+</script>
