@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+
+	function compareAnswers(userAnswer, answer){
+			if (userAnswer == answer){
+			alert("Верно!");
+		} else {
+			alert("Не верный ответ, правильный ответ: " + answer);
+		}
+	}
+
+	function getRandomNumber(max){
+		return Math.round(Math.random() * max);
+	}
+
+	function generateRandomNumberArray(length){
+		var arr = [];
+
+		for(var i = 0; i < length; i++){
+		arr.push(getRandomNumber(100));
+		}
+
+		return arr;
+	}
+
+
+	var numbers = generateRandomNumberArray(5);
+	
+
+	alert("Запомните числа и их порядок: " + numbers );
+
+	var userAnswer = +prompt("Каким было первое число?");
+
+	compareAnswers(userAnswer, numbers[0]);
+
+	userAnswer = +prompt("А последнее число?");
+	compareAnswers(userAnswer, numbers[numbers.length - 1]);
+
+
+
+	var n = getRandomNumber(numbers.length);
+	userAnswer = +prompt("А каким было число номер: " + (n + 1) + "?");
+	compareAnswers(userAnswer, numbers[n]);
+
+
+
+</script>
