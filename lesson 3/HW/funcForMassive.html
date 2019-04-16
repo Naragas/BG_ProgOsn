@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function numberArrayCreator(n){
+		var arr = [];
+		for(var i = 1; i <= n; i++){
+			arr.push(i);
+		}
+		return arr;
+	}
+
+	function arrayElementsSumm(arr){
+		var summ = 0;
+		for(i = 0; i < arr.length; i++){
+			summ+=arr[i];
+		}
+		return summ;
+	}
+
+	function maxArrayElement(arr){
+		var max = arr[0];
+		for (i = 1; i < arr.length; i++){
+			if ( arr[i] > max)
+				max = arr[i];
+		}
+		return max;
+	}
+
+	function minArrayElement(arr){
+		var min = arr[0];
+		for (i = 1; i < arr.length; i++){
+			if ( arr[i] < min)
+				min = arr[i];
+		}
+		return min;
+	}
+
+	function onlyEvenArrayElements(arr){
+		var evenNumbers = [];
+		for(var i = 0; i < arr.length; i++){
+			if ((arr[i] % 2) == 0){
+				evenNumbers.push(arr[i]);
+			}
+		}
+		return evenNumbers;
+	}
+
+	// Проверка работы функций!
+
+	var numbers = numberArrayCreator(10);
+	alert("Массив чисел от 1 до 10  " + numbers);
+
+	alert("Сумма всех элементов массива = " + arrayElementsSumm(numbers));
+
+	alert("Максимальный элемент массива равен " + maxArrayElement(numbers));
+
+	alert("Минимальный элемент массива равен " + minArrayElement(numbers));
+
+	alert("Четные числа массива: " + onlyEvenArrayElements(numbers));
+
+
+</script>
