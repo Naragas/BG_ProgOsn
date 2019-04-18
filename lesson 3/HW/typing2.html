@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	function typingGame(arr, welcomText, difficult ,) {
+		while(true){
+			alert(welcomText);
+
+			var text = generateText(arr, difficult);
+			var userText = prompt(text);
+			if (userText == text){
+				alert("Все верно!");
+				break;
+			} else {
+				alert("Вы ошиблись. Попробуйте еще раз");
+			}
+		}
+	}
+		
+
+
+	function getRandomNumber(max){
+		return Math.round(Math.random() * max);
+	}
+
+
+	function generateText(letters, length){
+		var text = "";
+		for(var i = 0; i < length; i++){
+			text += letters[getRandomNumber(letters.length- 1)];
+		}
+		return text;
+	}
+	
+
+
+	var welcomeOne = "Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О. Запомните расположение пальцев. Повторяйте за мной";
+
+	var welcomeTwo = "Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О. Запомните расположение пальцев.";
+
+
+	alert("Вас приветствует программа по обучению слепой печати");
+	
+	typingGame(["ф", "а"], welcomeOne, 10);
+
+	typingGame(["ы", "в"], welcomeTwo, 10);
+
+	typingGame(["о", "ж"], welcomeTwo, 10);
+
+
+
+</script>
