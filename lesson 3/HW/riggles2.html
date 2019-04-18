@@ -1,0 +1,34 @@
+﻿<meta charset="utf-8">
+<script>
+	
+	//функция принимающая массив вопросов и ответов и задающая пользователю вопросы.
+	function questionAsker (arr, i){
+		var userAnswer = new String(prompt(arr[i][0]));
+
+        if (arr[i][1].toLowerCase() == userAnswer.toLowerCase() || arr[i][2].toLowerCase() == userAnswer.toLowerCase()) {
+			alert("Вы дали верный ответ");
+			rightAnswerCount++;
+		} else{
+			alert("Вы дали не верный ответ\nПравильный ответ: " + arr[i][1] + " или " + arr[i][2]);
+		}
+	}
+
+	var quesitonNumber = 4;
+	var rightAnswerCount = 0;
+
+	//создаем многомерный массив с вопросом и двумя вариантами ответа.
+	var questionsAnswersArray = [
+		["Два кольца, два конца, а по середине гвоздик?", new String("Ножницы"), new String("Секатор")],
+		["Висит грушка - нельзя скушать?", new String("Лампочка"), new String("Лампа")],
+		["Что всему голова?", new String("Хлеб"), new String("Хлебушек")],
+		["Зимой и летом одним цветом?", new String("Ёлка"),  new String("Ель")]
+	]
+
+	for (var i = 0; i < quesitonNumber; i++) 
+    {
+       questionAsker(questionsAnswersArray, i);	
+	}
+
+alert("Вы дали " + rightAnswerCount + " правильных ответов. \nСпасибо за игру!");
+
+</script>

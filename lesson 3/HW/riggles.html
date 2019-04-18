@@ -1,0 +1,29 @@
+﻿<meta charset="utf-8">
+<script>
+	
+	var quesitonNumber = 4;
+	var rightAnswerCount = 0;
+
+	//создаем многомерный массив с вопросом и двумя вариантами ответа.
+	var questionsAnswersArray = [
+		["Два кольца, два конца, а по середине гвоздик?", new String("Ножницы"), new String("Секатор")],
+		["Висит грушка - нельзя скушать?", new String("Лампочка"), new String("Лампа")],
+		["Что всему голова?", new String("Хлеб"), new String("Хлебушек")],
+		["Зимой и летом одним цветом?", new String("Ёлка"),  new String("Ель")]
+	]
+
+	for (var i = 0; i < quesitonNumber; i++) 
+    {
+       var userAnswer = new String(prompt(questionsAnswersArray[i][0]));
+
+        if (questionsAnswersArray[i][1].toLowerCase() == userAnswer.toLowerCase() || questionsAnswersArray[i][2].toLowerCase() == userAnswer.toLowerCase()) {
+			alert("Вы дали верный ответ");
+			rightAnswerCount++;
+		} else{
+			alert("Вы дали не верный ответ\nПравильный ответ: " + questionsAnswersArray[i][1] + " или " + questionsAnswersArray[i][2]);
+		}
+	}
+
+alert("Вы дали " + rightAnswerCount + " правильных ответов. \nСпасибо за игру!");
+
+</script>
