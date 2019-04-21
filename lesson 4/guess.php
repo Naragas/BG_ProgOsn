@@ -48,11 +48,9 @@
 <body>
 
 <div class="content">
-	<div class="header">
-		<a href="index.html">Главная</a>
-		<a href="puzzle.html">Загадки</a>
-		<a href="#">Угадайка</a>
-	</div>
+	<?php 
+	include "menu.php";
+	?>
 
 <div class="contentWrap">
     <div class="content">
@@ -75,9 +73,9 @@
 	
 
 </div>
-<div class="footer">
-	Copyright &copy; Vasily Pupkin
-<div>
+<?php 
+	include "footer.php";
+?>
 
 
 </body>
