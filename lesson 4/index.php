@@ -22,6 +22,11 @@
 			<p>В этом мне помог IT-портал <a href="https://geekbrains.ru">GeekBrains</a></p>
 
 			<p>На этом сайте вы сможете сыграть в несколько игр, которые я написал: <br>
+			
+			<a href="passw-generator.php">Генератор паролей</a>
+			<a href="guess.php">Угадайка</a>
+			<a href="guess-2.php">Угадайка мультиплеер</a>
+			<a href="puzzle.php">Загадки</a>
 
 			</p>
 		</div>

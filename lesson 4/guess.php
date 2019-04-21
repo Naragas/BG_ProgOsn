@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Личный сайт студента GeekBrains</title>
+	<title>Угадайка</title>
 	<link rel="stylesheet" href="style.css"> 
 	<script type="text/javascript">
 
@@ -11,9 +11,7 @@
 		var maxTryCount = 3;
 
 		function readInt(){
-			var number = document.getElementById("userAnswer").value;
-			return parseInt(number);
-			// return +document.getElementById("userAnswer").value;
+			return +document.getElementById("userAnswer").value;
 		}
 
 		function write(text){

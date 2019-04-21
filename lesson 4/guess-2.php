@@ -2,13 +2,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Личный сайт студента GeekBrains</title>
+	<title>Угадайка мультиплеер</title>
 	<link rel="stylesheet" href="style.css"> 
 	<script type="text/javascript">
 
 		var answer = parseInt(Math.random() * 100);
 		var tryCount = 0;
 		var maxTryCount = 3;
+		var minRange = 0;
+		var maxRange = 100;
 
 		function readInt(uAnswer){
 			return +uAnswer.value;
@@ -33,13 +35,17 @@
 				hide("game");
 				return ("<b>Победил игрок номер 2! правильный ответ: " + answer);
 			} else if(answer < Math.min(value1, value2)){
-				return ("ответ в диапазоне от 0 до " + Math.min(value1, value2));
+				maxRange = Math.min(value1, value2);
+				//return ("ответ в диапазоне от " + minRange + " до " + maxRange);
 			} else if(answer > Math.max(value1, value2)){
-				return ("ответ в диапазоне от " + Math.max(value1, value2) + " до 100");
+				minRange = Math.max(value1, value2);
+				//return ("ответ в диапазоне от " + minRange + " до 100");
 			} else{
-				return ("ответ между " + Math.min(value1, value2) + " и " + Math.max(value1, value2))
-			}
+				minRange = Math.min(value1, value2);
+				maxRange = Math.max(value1, value2);
 				
+			}
+				return ("ответ между " + minRange + " и " + maxRange);
 			
 		}
 
@@ -71,7 +77,7 @@
     <div class="content">
         <div class="center">
 
-			<h1>Игра угадайка</h1>
+			<h1>Игра угадайка мультиплеер</h1>
 
 			<div class="box">
 				
